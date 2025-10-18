@@ -1,0 +1,13 @@
+{# templates/etudiant/affectation.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block title %}Affectation{% endblock %}
+
+{% block body %}
+    <h1>{{ message }}</h1>
+    <p>Cette page servira à affecter les étudiants à leurs modules.</p>
+
+    <hr>
+
+    <a href="{{ path('etudiant_list') }}">⬅ Retour à la liste des étudiants</a>
+{% endblock %}

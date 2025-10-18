@@ -1,0 +1,36 @@
+{# templates/etudiant/list.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block title %}Liste des Étudiants et Modules{% endblock %}
+
+{% block body %}
+    <h1>Liste des Étudiants</h1>
+
+
+
+    <hr>
+
+    <h1>Liste des Modules</h1>
+
+    {% if modules is not empty %}
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Nom du module</th>
+                <th>Coefficient</th>
+                <th>Enseignant</th>
+            </tr>
+            {% for module in modules %}
+                <tr>
+                    <td>{{ module.nom|upper }}</td>
+                    <td>{{ module.coefficient }}</td>
+                    <td>{{ module.enseignant }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>Aucun module trouvé !</p>
+    {% endif %}
+
+    <hr>
+    <a href="{{ path('etudiant_affecter') }}">➡ Aller à la page d'affectation</a>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mon Application Symfony{% endblock %}</title>
+</head>
+<body>
+<header style="background:#f3f3f3; padding:10px;">
+    <h1>Application Étudiant</h1>
+    <nav>
+        <a href="{{ path('etudiant_index_fils') }}">Accueil</a> |
+        <a href="{{ path('etudiant_list') }}">Liste des modules</a> |
+        <a href="{{ path('etudiant_affecter') }}">Affectation</a>
+    </nav>
+</header>
+
+<main style="margin:20px;">
+    {% block body %}{% endblock %}
+</main>
+
+<footer style="background:#f3f3f3; padding:10px; margin-top:20px;">
+    <p>© 2025 - Symfony Atelier 3</p>
+</footer>
+</body>
+</html>
